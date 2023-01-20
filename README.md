@@ -153,6 +153,7 @@ video_df = get_video_details(youtube, video_ids)
 video_df.to_csv('youtube_data.csv')
 ```
 <img src="table.png"/>
+
 Upload CSV file to Amazon S3:
 ```ruby
 s3_resource = boto3.resource('s3')
