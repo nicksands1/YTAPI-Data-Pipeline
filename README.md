@@ -11,7 +11,7 @@
 
 * Getting API key and reading data from YouTube API
 * Converting data to CSV and uploading to S3
-* Creating glue job crawls CSV file in S3 bucket and writes it to Redshift DB
+* Creating glue job that crawls CSV file in S3 bucket and writes it to Redshift DB
 * Create Lambda function that runs Glue Job on S3 uploads
 * Google Digital Studio creates dashboard with Redshift connection
 
@@ -147,7 +147,7 @@ print(video_df)
 # Prints the title, date published, view count, like count, comment count, and duration of the 50 most recent videos.
 ```
 
-Use pandas DataFrame to convert ```video_df``` to a CSV file.
+## Use pandas DataFrame to convert ```video_df``` to a CSV file.
 ```ruby
 video_df = get_video_details(youtube, video_ids)
 video_df.to_csv('youtube_data.csv')
