@@ -105,7 +105,7 @@ def get_video_details(youtube, video_ids):
 video_df = get_video_details(youtube, video_ids)
 video_df.to_csv('youtube_data.csv')
 
-bucket = 'nasdata-project' # already created on S3
+bucket = 'your_bucket_name' # already created on S3
 csv_buffer = io.StringIO()
 video_df.to_csv(csv_buffer)
 
