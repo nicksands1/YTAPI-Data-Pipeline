@@ -11,7 +11,7 @@
 
 * Getting API key and reading data from YouTube API
 * Converting data to CSV and uploading to S3
-* Creatin glue job crawls CSV file in S3 bucket and writes it to Redshift DB
+* Creating glue job crawls CSV file in S3 bucket and writes it to Redshift DB
 * Create Lambda function that runs Glue Job on S3 uploads
 * Google Digital Studio creates dashboard with Redshift connection
 
