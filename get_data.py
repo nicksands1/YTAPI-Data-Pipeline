@@ -5,8 +5,8 @@ import time
 import boto3
 import io
 
-channel_id = 'UCLXzq85ijg2LwJWFrz4pkmw'
-api_key = 'AIzaSyCCysX-jVw4WctEpq69eiktR7XqNTA-3TE'
+channel_id = 'your_channel_id'
+api_key = 'your_api_key'
 
 api_service_name = "youtube"
 api_version = "v3"
@@ -20,7 +20,7 @@ def get_channel_stats(youtube, channel_id):
     all_data = []
     request = youtube.channels().list(
         part='snippet,statistics,contentDetails',
-        id='UCLXzq85ijg2LwJWFrz4pkmw'
+        id=channel_id
     )
     response = request.execute()
 
