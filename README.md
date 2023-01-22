@@ -1,6 +1,8 @@
 # YouTube API Data Pipeline
 <img src="diagram.png"/>
 
+[My Project](https://datastudio.google.com/reporting/50b074b7-5c59-4538-8d03-d1e2318e4839)
+
 ## Prerequisites
 * [Google account](https://accounts.google.com/signup)
 * [AWS account](https://aws.amazon.com/console/)
