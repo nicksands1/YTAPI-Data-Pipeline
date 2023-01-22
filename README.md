@@ -26,7 +26,7 @@
 Open VSCode and create a python file and import the following modules:
 
 
-```ruby
+```python
 import requests
 from googleapiclient.discovery
 import pandas as pd
@@ -37,7 +37,7 @@ import io
 
 Import your API key and the channel ID for the channel you want to data from
 You can find the channel ID by pasting the channel ID into this website [here](https://commentpicker.com/youtube-channel-id.php):
-```ruby
+```python
 channel_id = 'your_channel_id'
 api_key = 'your_api_key'
 ```
@@ -50,7 +50,7 @@ api_version = "v3"
 youtube = build(api_service_name, api_version, developerKey=api_key)
 ```
 This function gets the data of the channel (name, subscribers, view count, video count):
-```ruby
+```python
 def get_channel_stats(youtube, channel_id):
 
     all_data = []
@@ -76,7 +76,7 @@ print(channel_stats)
 # Copy [playlistId] and save to variable playlist_id
 ```
 This function gets the video ID:
-```ruby
+```python
 def get_vids(youtube, playlist_id):
     video_ids = []
 
@@ -110,7 +110,7 @@ print(video_ids)
 # Print returns the video IDs for the 50 most recent videos.
 ```
 This function gets the video data for the 50 most recent videos:
-```ruby
+```python
 def get_video_details(youtube, video_ids): 
     all_video_info = []
     
@@ -155,7 +155,7 @@ video_df.to_csv('youtube_data.csv')
 <img src="table.png"/>
 
 Upload CSV file to Amazon S3:
-```ruby
+```python
 s3_resource = boto3.resource('s3')
 s3_resource.Object(bucket, 'youtube_data.csv').put(Body=csv_buffer.getvalue())
 ```
