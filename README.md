@@ -150,7 +150,7 @@ print(video_df)
 ```
 
 ## Use pandas DataFrame to convert ```video_df``` to a CSV file.
-```ruby
+```public
 video_df = get_video_details(youtube, video_ids)
 video_df.to_csv('youtube_data.csv')
 ```
@@ -161,5 +161,3 @@ Upload CSV file to Amazon S3:
 s3_resource = boto3.resource('s3')
 s3_resource.Object(bucket, 'youtube_data.csv').put(Body=csv_buffer.getvalue())
 ```
-## Creating AWS Glue crawlers
-
